@@ -11,7 +11,7 @@
   
 **☆特殊功能**
 
-随机踢人 （在群内发送/随机踢人即可，需要对话指令插件）  
+随机踢人 （在群内发送/随机踢人即可，需要[Chat-command](https://github.com/project-mirai/chat-command)插件）  
 
 **☆未来更新计划：**  
   
