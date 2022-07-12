@@ -2,6 +2,10 @@ package com.chieri;
 
 import com.chieri.AuthorEggs.AuthorEggs;
 import com.chieri.EroImage.EroImage;
+import com.chieri.command.kick;
+import net.mamoe.mirai.console.command.CommandManager;
+import net.mamoe.mirai.console.permission.AbstractPermitteeId;
+import net.mamoe.mirai.console.permission.PermissionService;
 import net.mamoe.mirai.console.plugin.jvm.JavaPlugin;
 import net.mamoe.mirai.console.plugin.jvm.JvmPluginDescriptionBuilder;
 
@@ -16,7 +20,7 @@ public final class Plugin extends JavaPlugin {
                         "1.0"
                 )
                 .author("Chieeri")
-                .name("☆Chieri涩图插件☆")
+                .name("☆Chieri涩涩插件☆")
                 .info("=============正在加载================")
                 .build()
         );
@@ -26,6 +30,7 @@ public final class Plugin extends JavaPlugin {
     public void onEnable() {
 
         getLogger().info("============插件加载成功!=============");
+
         // 作者彩蛋嘻嘻
         AuthorEggs Egg = new AuthorEggs(); //作者彩蛋加载
 
@@ -35,6 +40,7 @@ public final class Plugin extends JavaPlugin {
             e.printStackTrace();
         }
 
-
+        //注册指令
+        CommandManager.INSTANCE.registerCommand(new kick(),true);
     }
 }
