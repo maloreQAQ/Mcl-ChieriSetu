@@ -16,6 +16,8 @@
 **使用方式：**  
   
 1.在群内发送  “涩图” 即可  
+
+![图片名称](https://www.baidu.com/img/bd_logo1.png)  
   
 (在config内可修改触发词）  
   
