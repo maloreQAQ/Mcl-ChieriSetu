@@ -2,6 +2,8 @@ package com.chieri;
 
 import com.chieri.AuthorEggs.AuthorEggs;
 import com.chieri.EroImage.EroImage;
+import com.chieri.command.OrderFaBing;
+import com.chieri.command.RandomFaBing;
 import com.chieri.command.kick;
 import net.mamoe.mirai.console.command.CommandManager;
 import net.mamoe.mirai.console.permission.AbstractPermitteeId;
@@ -17,11 +19,11 @@ public final class Plugin extends JavaPlugin {
         super(
                 new JvmPluginDescriptionBuilder(
                         "com.chieri.plugin",
-                        "1.0"
+                        "1.3.1"
                 )
                 .author("Chieeri")
                 .name("☆Chieri涩涩插件☆")
-                .info("=============正在加载================")
+                .info("当前版本为ver 1.3.1哦")
                 .build()
         );
     }
@@ -42,5 +44,7 @@ public final class Plugin extends JavaPlugin {
 
         //注册指令
         CommandManager.INSTANCE.registerCommand(new kick(),true);
+        CommandManager.INSTANCE.registerCommand(new RandomFaBing(),true);
+        CommandManager.INSTANCE.registerCommand(new OrderFaBing(),true);
     }
 }

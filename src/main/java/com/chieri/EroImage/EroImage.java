@@ -30,7 +30,6 @@ public class EroImage {
                     PlainText text = new PlainText("涩图给你，别冲太多哦~");
                     Face smile = new Face(103);
                     Image image = null;
-
                     try {
                         image = ExternalResource.uploadAsImage(new URL(js.getUrl()).openConnection().getInputStream(), event.getSubject());
                     } catch (Exception e) {
@@ -40,9 +39,9 @@ public class EroImage {
                     MessageChain chain = new MessageChainBuilder()
                             .append(text)
                             .append(smile)
-                            .append(image)
                             .build();
                     event.getSubject().sendMessage(chain);
+                    event.getSubject().sendMessage(image);
                 }
             });
         }

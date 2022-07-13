@@ -32,7 +32,7 @@ public final class kick extends JSimpleCommand {
         else if(i != 0){
             try {
                 member.kick("恭喜", false);
-                Sender.sendMessage("有个B被踢了,他是:" + MemberName );
+                Sender.sendMessage("有个B被踢了,他是" + MemberName );
             } catch (Exception ex) {
                 Sender.sendMessage("踏马的，肯定是随机到权限狗了,再来一次吧");
             }
